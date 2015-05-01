@@ -37,6 +37,14 @@ class DreamDetail : UIViewController   {
         
         self.dreamDetailNameLabel.text = self.dreamDetailName
         self.dreamDetailBackgroundImageView.image = UIImage(named: dreamBackgroundImageName)
+        
+        var audioPath = NSBundle.mainBundle().pathForResource(dreamMusic, ofType: "m4a")
+        var audioURL = NSURL.fileURLWithPath(audioPath!)
+        self.audioPlayer = AVAudioPlayer(contentsOfURL: audioURL, error:&error)
+  
+        var baudioPath = NSBundle.mainBundle().pathForResource(binauralAudio, ofType: "mp3")
+        var baudioURL = NSURL.fileURLWithPath(baudioPath!)
+        self.binauralPlayer = AVAudioPlayer(contentsOfURL: baudioURL, error:&error)
          
     }
     
@@ -45,37 +53,37 @@ class DreamDetail : UIViewController   {
     //MARK: ----------------------
     
     @IBAction func playButtonAction(sender: AnyObject) {
-        var audioPath = NSBundle.mainBundle().pathForResource(dreamMusic, ofType: "m4a")
-        var audioURL = NSURL.fileURLWithPath(audioPath!)
-        self.audioPlayer = AVAudioPlayer(contentsOfURL: audioURL, error:&error)
-
+       
         self.audioPlayer.play()
     }
     
-    @IBAction func musicVolume(sender: AnyObject) {
-
+    @IBAction func musicVolume(sender: UIButton) {
+        if self.audioPlayer.playing{
            self.audioPlayer.volume = musicVolumeControl.value
+        }
+        
         
     }
     
     @IBAction func binauralPlayButtonAction(sender: AnyObject) {
-        var audioPath = NSBundle.mainBundle().pathForResource(binauralAudio, ofType: "mp3")
-        var audioURL = NSURL.fileURLWithPath(audioPath!)
-        self.binauralPlayer = AVAudioPlayer(contentsOfURL: audioURL, error:&error)
-        
-        
+     
         self.binauralPlayer.play()
     }
     
     @IBAction func binauralVolume(sender: AnyObject) {
+        if self.binauralPlayer.playing{
+         self.binauralPlayer.volume = binauralVolumeControl.value
+        }
         
-        self.binauralPlayer.volume = binauralVolumeControl.value
         
     }
     
     @IBAction func stopButtonAction(sender: AnyObject) {
-        self.audioPlayer.stop()
+        if audioPlayer.playing || binauralPlayer.playing {
+            self.audioPlayer.stop()
         self.binauralPlayer.stop()
+        }
+        
     }
     
     

@@ -122,7 +122,6 @@
                                 </constraints>
                                 <state key="normal" title="Play">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="playButtonAction:" destination="VBm-ja-7Wc" eventType="touchUpInside" id="Et6-Pe-BMg"/>
@@ -184,10 +183,23 @@
                                     <action selector="binauralPlayButtonAction:" destination="VBm-ja-7Wc" eventType="touchUpInside" id="xFy-T4-H0F"/>
                                 </connections>
                             </button>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBF-uH-7g2">
+                                <rect key="frame" x="180" y="444" width="240" height="128"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="M1a-3G-lRy">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="N60-bT-zea"/>
+                                    <constraint firstAttribute="height" constant="128" id="lCp-Yq-Bkb"/>
+                                </constraints>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="U10-dR-gYO" secondAttribute="centerX" id="0Gg-ZI-SIU"/>
+                            <constraint firstItem="SBF-uH-7g2" firstAttribute="top" secondItem="U10-dR-gYO" secondAttribute="bottom" constant="36" id="1hG-Wh-KlO"/>
                             <constraint firstAttribute="centerX" secondItem="cOB-W4-BCj" secondAttribute="centerX" id="4xU-GK-rTz"/>
                             <constraint firstItem="24g-l7-GpY" firstAttribute="top" secondItem="kVm-av-cKb" secondAttribute="bottom" id="7e3-4T-QdB"/>
                             <constraint firstItem="cOB-W4-BCj" firstAttribute="trailing" secondItem="kJg-DP-Rdm" secondAttribute="trailingMargin" id="C4h-fS-Saf"/>
@@ -204,6 +216,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="kVm-av-cKb" secondAttribute="trailing" constant="-16" id="kFm-fo-YmQ"/>
                             <constraint firstItem="OCG-7a-vfp" firstAttribute="top" secondItem="zcb-aO-73a" secondAttribute="bottom" constant="17" id="rHO-xe-uov"/>
                             <constraint firstItem="zcb-aO-73a" firstAttribute="top" secondItem="MGA-Jm-BYh" secondAttribute="bottom" constant="23" id="tPs-TY-OZY"/>
+                            <constraint firstAttribute="centerX" secondItem="SBF-uH-7g2" secondAttribute="centerX" id="uJv-lz-WUJ"/>
                             <constraint firstItem="U10-dR-gYO" firstAttribute="top" secondItem="vqT-D1-hrd" secondAttribute="bottom" constant="36" id="zYi-O9-bfA"/>
                         </constraints>
                     </view>
