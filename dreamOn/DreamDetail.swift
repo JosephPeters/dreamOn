@@ -12,12 +12,17 @@ import UIKit
 
 class DreamDetail : UIViewController   {
     
+    @IBOutlet weak var musicVolumeControl: UISlider!
+    
+    @IBOutlet weak var binauralVolumeControl: UISlider!
     @IBOutlet weak var dreamDetailNameLabel: UILabel!
     
     @IBOutlet weak var dreamDetailBackgroundImageView: UIImageView!
     
     var audioPlayer = AVAudioPlayer()
     var binauralPlayer = AVAudioPlayer()
+    
+    var error: NSError?
     
     //MARK: ----------------------
     //MARK: Properties
@@ -42,18 +47,30 @@ class DreamDetail : UIViewController   {
     @IBAction func playButtonAction(sender: AnyObject) {
         var audioPath = NSBundle.mainBundle().pathForResource(dreamMusic, ofType: "m4a")
         var audioURL = NSURL.fileURLWithPath(audioPath!)
-        self.audioPlayer = AVAudioPlayer(contentsOfURL: audioURL, error: nil)
+        self.audioPlayer = AVAudioPlayer(contentsOfURL: audioURL, error:&error)
 
         self.audioPlayer.play()
+    }
+    
+    @IBAction func musicVolume(sender: AnyObject) {
+
+           self.audioPlayer.volume = musicVolumeControl.value
+        
     }
     
     @IBAction func binauralPlayButtonAction(sender: AnyObject) {
         var audioPath = NSBundle.mainBundle().pathForResource(binauralAudio, ofType: "mp3")
         var audioURL = NSURL.fileURLWithPath(audioPath!)
-        self.binauralPlayer = AVAudioPlayer(contentsOfURL: audioURL, error: nil)
+        self.binauralPlayer = AVAudioPlayer(contentsOfURL: audioURL, error:&error)
         
         
         self.binauralPlayer.play()
+    }
+    
+    @IBAction func binauralVolume(sender: AnyObject) {
+        
+        self.binauralPlayer.volume = binauralVolumeControl.value
+        
     }
     
     @IBAction func stopButtonAction(sender: AnyObject) {
