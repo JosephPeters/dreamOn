@@ -14,14 +14,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RVh-o3-BH9">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="0.79446211870000005" green="0.81101614239999997" blue="0.51250951580000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9Wm-1I-cN1">
-                                    <size key="itemSize" width="526" height="178"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="0.0" id="uHz-0e-oyf">
+                                    <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -31,22 +31,22 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="526" height="178"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="178"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="night_lake" translatesAutoresizingMaskIntoConstraints="NO" id="oE0-JR-htc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="526" height="178"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dreambg1" translatesAutoresizingMaskIntoConstraints="NO" id="oE0-JR-htc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="178"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsF-aP-VSk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="526" height="178"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.42999999999999999" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="178"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.26000000000000001" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPe-sd-pnW">
-                                                    <rect key="frame" x="8" y="30" width="510" height="40"/>
+                                                    <rect key="frame" x="8" y="69" width="144" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="YXy-I9-hLA"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="35"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="36"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -61,13 +61,13 @@
                                             <constraint firstAttribute="trailingMargin" secondItem="dsF-aP-VSk" secondAttribute="trailing" constant="-8" id="KnJ-ZW-Zl2"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="dsF-aP-VSk" secondAttribute="bottom" constant="-8" id="Swj-h8-1a1"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="oE0-JR-htc" secondAttribute="trailing" constant="-8" id="WRM-HE-IaC"/>
-                                            <constraint firstItem="jPe-sd-pnW" firstAttribute="top" secondItem="Oed-Yj-pcl" secondAttribute="topMargin" constant="22" id="ZiE-62-Dvn"/>
                                             <constraint firstItem="jPe-sd-pnW" firstAttribute="trailing" secondItem="Oed-Yj-pcl" secondAttribute="trailingMargin" id="bIO-Pb-09k"/>
                                             <constraint firstAttribute="centerX" secondItem="jPe-sd-pnW" secondAttribute="centerX" id="odj-7s-Tqh"/>
                                             <constraint firstItem="dsF-aP-VSk" firstAttribute="leading" secondItem="Oed-Yj-pcl" secondAttribute="leadingMargin" constant="-8" id="q40-3e-JJt"/>
+                                            <constraint firstAttribute="centerY" secondItem="jPe-sd-pnW" secondAttribute="centerY" id="tsw-AB-07j"/>
                                             <constraint firstItem="oE0-JR-htc" firstAttribute="top" secondItem="Oed-Yj-pcl" secondAttribute="topMargin" constant="-8" id="yW6-Cm-5th"/>
                                         </constraints>
-                                        <size key="customSize" width="526" height="178"/>
+                                        <size key="customSize" width="160" height="178"/>
                                         <connections>
                                             <outlet property="dreamBackgroundImageView" destination="oE0-JR-htc" id="tif-N7-u6g"/>
                                             <outlet property="dreamNameLabel" destination="jPe-sd-pnW" id="3rz-7j-495"/>
@@ -110,7 +110,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="night_lake" translatesAutoresizingMaskIntoConstraints="NO" id="kVm-av-cKb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dreambg7" translatesAutoresizingMaskIntoConstraints="NO" id="kVm-av-cKb">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="1" green="0.69803921570000005" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
@@ -121,6 +121,7 @@
                                     <constraint firstAttribute="height" constant="30" id="ddI-9O-j9N"/>
                                 </constraints>
                                 <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -134,6 +135,7 @@
                                     <constraint firstAttribute="width" constant="128" id="h4P-zK-83H"/>
                                 </constraints>
                                 <state key="normal" title="Stop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -143,18 +145,23 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOB-W4-BCj">
                                 <rect key="frame" x="16" y="89" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vqT-D1-hrd">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vqT-D1-hrd">
                                 <rect key="frame" x="209" y="312" width="183" height="31"/>
+                                <color key="tintColor" red="1" green="0.69803921570000005" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="179" id="3Hd-dG-bon"/>
                                     <constraint firstAttribute="height" constant="30" id="V09-1Z-RHl"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="binauralVolume:" destination="VBm-ja-7Wc" eventType="valueChanged" id="2Im-36-OQ9"/>
+                                </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zcb-aO-73a">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zcb-aO-73a">
                                 <rect key="frame" x="209" y="218" width="183" height="31"/>
+                                <color key="tintColor" red="1" green="0.69803921570000005" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="179" id="fHA-QN-TqS"/>
                                     <constraint firstAttribute="height" constant="30" id="sjY-du-zn0"/>
@@ -170,6 +177,7 @@
                                     <constraint firstAttribute="width" constant="128" id="e8C-ts-fcO"/>
                                 </constraints>
                                 <state key="normal" title="Binaural Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -228,6 +236,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="night_lake" width="1920" height="1080"/>
+        <image name="dreambg1" width="1242" height="2208"/>
+        <image name="dreambg7" width="1242" height="2208"/>
     </resources>
 </document>
