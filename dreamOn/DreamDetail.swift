@@ -10,7 +10,7 @@ import Foundation
 import AVFoundation
 import UIKit
 
-class DreamDetail : UIViewController   {
+class DreamDetail : UIViewController, UIGestureRecognizerDelegate   {
     
     @IBOutlet weak var musicVolumeControl: UISlider!
     
@@ -24,6 +24,10 @@ class DreamDetail : UIViewController   {
     
     var error: NSError?
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     //MARK: ----------------------
     //MARK: Properties
     //MARK: ----------------------
@@ -35,6 +39,12 @@ class DreamDetail : UIViewController   {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Transparent navigation bar
+        navigationController!.navigationBar.translucent = true
+        navigationController!.navigationBar.shadowImage = UIImage()
+        navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        /////
+        
         self.dreamDetailNameLabel.text = self.dreamDetailName
         self.dreamDetailBackgroundImageView.image = UIImage(named: dreamBackgroundImageName)
         
@@ -45,13 +55,18 @@ class DreamDetail : UIViewController   {
         var baudioPath = NSBundle.mainBundle().pathForResource(binauralAudio, ofType: "mp3")
         var baudioURL = NSURL.fileURLWithPath(baudioPath!)
         self.binauralPlayer = AVAudioPlayer(contentsOfURL: baudioURL, error:&error)
-         
+                
     }
     
     //MARK: ----------------------
     //MARK: IBActions
     //MARK: ----------------------
     
+    
+    @IBAction func backToDreamList(sender: AnyObject) {
+        
+        navigationController?.popViewControllerAnimated(true)
+    }
     @IBAction func playButtonAction(sender: AnyObject) {
        
         self.audioPlayer.play()

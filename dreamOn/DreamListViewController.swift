@@ -27,9 +27,18 @@ class DreamListViewController: UIViewController , UICollectionViewDataSource, UI
     var dreamMusic = ""
     var binauralAudio = ""
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //navigationController?.setNavigationBarHidden(true, animated: false)
+        //Transparent navigation bar
+        navigationController!.navigationBar.translucent = true
+        navigationController!.navigationBar.shadowImage = UIImage()
+        navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        /////
         
         //MARK: ----------------------
         //MARK: Dreams
