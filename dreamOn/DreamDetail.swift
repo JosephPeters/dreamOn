@@ -55,7 +55,12 @@ class DreamDetail : UIViewController, UIGestureRecognizerDelegate   {
         var baudioPath = NSBundle.mainBundle().pathForResource(binauralAudio, ofType: "mp3")
         var baudioURL = NSURL.fileURLWithPath(baudioPath!)
         self.binauralPlayer = AVAudioPlayer(contentsOfURL: baudioURL, error:&error)
-                
+        
+        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
+        AVAudioSession.sharedInstance().setActive(true, error: nil)
+        
+
+        
     }
     
     //MARK: ----------------------
@@ -70,6 +75,7 @@ class DreamDetail : UIViewController, UIGestureRecognizerDelegate   {
     @IBAction func playButtonAction(sender: AnyObject) {
        
         self.audioPlayer.play()
+
     }
     
     @IBAction func musicVolume(sender: UIButton) {

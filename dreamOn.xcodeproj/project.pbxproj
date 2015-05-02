@@ -220,6 +220,11 @@
 					415FE60F1AF2712A008C8F5B = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = Z8R3MKTJFL;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					415FE6271AF2712A008C8F5B = {
 						CreatedOnToolsVersion = 6.3;
