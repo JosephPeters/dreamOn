@@ -17,6 +17,7 @@ class DreamDetail : UIViewController, UIGestureRecognizerDelegate   {
     @IBOutlet weak var binauralVolumeControl: UISlider!
     @IBOutlet weak var dreamDetailNameLabel: UILabel!
     
+    @IBOutlet weak var circularDreamImage: UIImageView!
     @IBOutlet weak var dreamDetailBackgroundImageView: UIImageView!
     
     var audioPlayer = AVAudioPlayer()
@@ -38,15 +39,17 @@ class DreamDetail : UIViewController, UIGestureRecognizerDelegate   {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Transparent navigation bar
-        navigationController!.navigationBar.translucent = true
-        navigationController!.navigationBar.shadowImage = UIImage()
-        navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        /////
+        self.navigationController?.interactivePopGestureRecognizer.delegate = self;
+
+        self.navigationController?.interactivePopGestureRecognizer.enabled = true
         
         self.dreamDetailNameLabel.text = self.dreamDetailName
         self.dreamDetailBackgroundImageView.image = UIImage(named: dreamBackgroundImageName)
+        self.dreamDetailBackgroundImageView.layer.masksToBounds = true
+        
+        self.circularDreamImage.image = UIImage(named: dreamBackgroundImageName)
+        self.circularDreamImage.layer.cornerRadius = 150
+        self.circularDreamImage.layer.masksToBounds = true
         
         var audioPath = NSBundle.mainBundle().pathForResource(dreamMusic, ofType: "m4a")
         var audioURL = NSURL.fileURLWithPath(audioPath!)
@@ -58,8 +61,6 @@ class DreamDetail : UIViewController, UIGestureRecognizerDelegate   {
         
         AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
         AVAudioSession.sharedInstance().setActive(true, error: nil)
-        
-
         
     }
     
@@ -106,6 +107,5 @@ class DreamDetail : UIViewController, UIGestureRecognizerDelegate   {
         }
         
     }
-    
     
 }

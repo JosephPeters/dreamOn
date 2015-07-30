@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4109415D1AF3DC080050FE0F /* bn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4109415C1AF3DC080050FE0F /* bn.mp3 */; };
+		4109415F1AF553230050FE0F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4109415E1AF553230050FE0F /* MenuViewController.swift */; };
 		415FE6161AF2712A008C8F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415FE6151AF2712A008C8F5B /* AppDelegate.swift */; };
 		415FE6191AF2712A008C8F5B /* dreamOn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 415FE6171AF2712A008C8F5B /* dreamOn.xcdatamodeld */; };
 		415FE61B1AF2712A008C8F5B /* DreamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415FE61A1AF2712A008C8F5B /* DreamListViewController.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		4109415C1AF3DC080050FE0F /* bn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bn.mp3; sourceTree = "<group>"; };
+		4109415E1AF553230050FE0F /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		415FE6101AF2712A008C8F5B /* dreamOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dreamOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		415FE6141AF2712A008C8F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		415FE6151AF2712A008C8F5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				415FE63E1AF2B942008C8F5B /* Objects */,
 				415FE6151AF2712A008C8F5B /* AppDelegate.swift */,
 				415FE61C1AF2712A008C8F5B /* Main.storyboard */,
+				4109415E1AF553230050FE0F /* MenuViewController.swift */,
 				415FE61F1AF2712A008C8F5B /* Images.xcassets */,
 				415FE6211AF2712A008C8F5B /* LaunchScreen.xib */,
 				415FE6171AF2712A008C8F5B /* dreamOn.xcdatamodeld */,
@@ -298,6 +301,7 @@
 				415FE63B1AF27EDC008C8F5B /* DreamDetail.swift in Sources */,
 				415FE6391AF27CC9008C8F5B /* DreamObject.swift in Sources */,
 				415FE63D1AF28145008C8F5B /* DreamCollectionViewCell.swift in Sources */,
+				4109415F1AF553230050FE0F /* MenuViewController.swift in Sources */,
 				415FE61B1AF2712A008C8F5B /* DreamListViewController.swift in Sources */,
 				415FE6191AF2712A008C8F5B /* dreamOn.xcdatamodeld in Sources */,
 				415FE6161AF2712A008C8F5B /* AppDelegate.swift in Sources */,
